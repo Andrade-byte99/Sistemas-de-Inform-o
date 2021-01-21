@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistemas de informação</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand">Sistemas de informação</a>
+    <form class="form-inline navbar-right">
+        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="mostrarAlerta()">Alerta</button>
+    </form>
+</nav>
+<div class="container">
+    <div class="alert alert-success" role="alert" style="margin-top: 16px;">
+        Este trabalho foi realizado com muito gosto por Nuno Andrade e Miguel Correia
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Multiplicação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="valor1">Numero 1</label>
+                            <input type="text" class="form-control" id="valor1" placeholder="Numero 1">
+                        </div>
+                        <div class="form-group">
+                            <label for="valor2">Numero 2</label>
+                            <input type="text" class="form-control" id="valor2" placeholder="Numero 2">
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="calcularModal()">Calcular</button>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var corBg = "#d3efff";
+
+    function mostrarAlerta() {
+        alert($("#searchNav").val().toUpperCase());
+    }
+
+    function calcularModal() {
+        alert(Math.abs(parseInt($("#valor1").val()) * parseInt($("#valor2").val())))
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
